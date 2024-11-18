@@ -2,6 +2,10 @@ import express, { Router } from 'express';
 import authRoute from './auth.route';
 import docsRoute from './swagger.route';
 import userRoute from './user.route';
+import driverRoute from './driver.route';
+import vehicleRoute from './vehicle.route';
+import shipmentRoute from './shipment.route';
+import maintenanceRoute from './maintenance.route';
 import config from '../../config/config';
 
 const router = express.Router();
@@ -19,6 +23,22 @@ const defaultIRoute: IRoute[] = [
   {
     path: '/users',
     route: userRoute,
+  },
+  {
+    path: '/drivers',
+    route: driverRoute,
+  },
+  {
+    path: '/vehicles',
+    route: vehicleRoute,
+  },
+  {
+    path: '/shipments',
+    route: shipmentRoute,
+  },
+  {
+    path: '/maintenances',
+    route: maintenanceRoute,
   },
 ];
 
